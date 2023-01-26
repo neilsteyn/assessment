@@ -64,7 +64,11 @@
                         </div>
                         <ul>
                             <?php foreach ($lists as $key => $list){ ?>
-                                <li id="<?= $list->id; ?>"><input type="checkbox"><span><?= $list->shopping_list_item; ?></span><span><a class="btn btn-edit">Edit</a><a class="btn btn-delete">Delete</a></span></li>
+                                <li id="<?= $list->id; ?>">
+                                    <input type="checkbox">
+                                    <span><?= $list->shopping_list_item; ?></span>
+                                    <span><a class="btn btn-edit">Edit</a><a class="btn btn-delete">Delete</a></span>
+                                </li>
                             <?php } ?>
                         </ul>
                     </div>
@@ -81,7 +85,7 @@
                 var shopping_list_item_id = li.attr('id');
                 var shopping_list_item_value = li.attr('id');
 
-                api.update(shopping_list_item_id, shopping_list_item).then(()=>{
+                api.update(shopping_list_item_id, shopping_list_item_value).then(()=>{
 
                 }).catch(()=>{
 
